@@ -2,7 +2,7 @@ locals {
   name = var.override_name == null ? (var.name == null ? "${var.product}-${var.env}" : "${var.name}-${var.env}") : var.override_name
 }
 
-resource "azurerm_log_analytics_workspace" "example" {
+resource "azurerm_log_analytics_workspace" "log_analytics_workspace_id" {
   name                = "central-workspace"
   location            = var.location
   resource_group_name = var.resource_group_name
