@@ -2,10 +2,12 @@ locals {
   name = var.override_name == null ? (var.name == null ? "${var.product}-${var.env}" : "${var.name}-${var.env}") : var.override_name
 }
 
-module "log_analytics_workspace_id" {
-  source = "git::https://github.com/hmcts/terraform-module-log-analytics-workspace-id?ref=master"
-
-  environment = var.env
+resource "azurerm_log_analytics_workspace" "example" {
+  name                = "central-workspace"
+  location            = var.location
+  resource_group_name = var.resource_group_name
+  sku                 = "PerGB2018"
+  retention_in_days   = 30
 }
 
 resource "azurerm_application_insights" "this" {
