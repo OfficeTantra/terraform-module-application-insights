@@ -47,7 +47,7 @@ resource "azurerm_monitor_scheduled_query_rules_alert_v2" "main" {
   evaluation_frequency = "P1D"
   window_duration      = "P1D"
   severity             = 4
-  scopes               = [module.log_analytics_workspace_id.workspace_id]
+  scopes               = [azurerm_log_analytics_workspace.log_analytics_workspace_id.workspace_id]
   description          = "Monitors for application insight reaching it's daily cap."
 
   criteria {

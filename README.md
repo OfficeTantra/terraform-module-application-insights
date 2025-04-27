@@ -34,12 +34,6 @@ module "application_insights" {
 | <a name="provider_http"></a> [http](#provider\_http) | n/a |
 | <a name="provider_null"></a> [null](#provider\_null) | n/a |
 
-## Modules
-
-| Name | Source | Version |
-|------|--------|---------|
-| <a name="module_log_analytics_workspace_id"></a> [log\_analytics\_workspace\_id](#module\_log\_analytics\_workspace\_id) | git::https://github.com/hmcts/terraform-module-log-analytics-workspace-id | master |
-
 ## Resources
 
 | Name | Type |
