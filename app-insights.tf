@@ -20,7 +20,7 @@ resource "azurerm_application_insights" "this" {
   application_type     = var.application_type
   daily_data_cap_in_gb = var.daily_data_cap_in_gb
   sampling_percentage  = var.sampling_percentage
-  workspace_id         = azurerm_log_analytics_workspace.log_analytics_workspace_id.workspace_id
+  workspace_id         = azurerm_log_analytics_workspace.log_analytics_workspace_id.id
 
   daily_data_cap_notifications_disabled = true
 
